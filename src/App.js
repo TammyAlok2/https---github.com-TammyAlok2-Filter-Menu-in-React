@@ -1,9 +1,12 @@
 import React from 'react'
+import ReduxUI from './Components/ReduxUI'
+import UseEffect from './Components/UseEffect'
 
 const App = () => {
   return (
     <>
-    This is app file </>
+    <UseEffect/>
+    </>
   )
 }
 
