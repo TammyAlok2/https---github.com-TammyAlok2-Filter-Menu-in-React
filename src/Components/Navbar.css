@@ -1,0 +1,9 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.logo{
+    font-size: larger;
+    font-weight: bolder;
+}

@@ -1,11 +1,17 @@
 import React from 'react'
-import ReduxUI from './Components/ReduxUI'
+
 import UseEffect from './Components/UseEffect'
+import Navbar from './Components/Navbar'
+import Cart from './Components/Cart'
 
 const App = () => {
   return (
     <>
+    <Navbar/>
     <UseEffect/>
+  <Cart/>
+  
+
     </>
   )
 }
