@@ -2,7 +2,9 @@ import React, { useEffect,useState } from 'react'
 import './UseEffect.css'
 import { useDispatch } from 'react-redux';
 import { add } from '../store/createSlice';
-import { NavLink } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Practise = () => {
   const dispatch = useDispatch();
@@ -17,13 +19,16 @@ const Practise = () => {
         setUsers();
     },[])
   const handleAdd= (product)=>{
-    console.log('hello muskan')
+    toast('succefully added');
+    console.log('hello muskan');
+    console.log('love you muskan');
 dispatch(add(product));
     }
 
 
   return (
     <>
+    <Link to="cart"> Cart </Link>
    <h2 className='product-card'>Product Card</h2>
 
     <div className="container">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import UseEffect from './Components/UseEffect'
 import Navbar from './Components/Navbar'
@@ -8,8 +9,17 @@ const App = () => {
   return (
     <>
     <Navbar/>
-    <UseEffect/>
-  <Cart/>
+
+       <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UseEffect/>}>
+         
+          <Route path="cart" element={<Cart/>} />
+        
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   
 
     </>
