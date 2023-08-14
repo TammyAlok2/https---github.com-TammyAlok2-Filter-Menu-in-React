@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
 <>
     <nav>
- 
+ <Link to={'cart'}> Cart </Link>
     <div> cartItems<b>{items.length}</b>
     </div>
   </nav>

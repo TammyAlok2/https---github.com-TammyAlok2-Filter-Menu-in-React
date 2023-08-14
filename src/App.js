@@ -8,7 +8,6 @@ import Cart from './Components/Cart'
 const App = () => {
   return (
     <>
-    <Navbar/>
 
        <BrowserRouter>
       <Routes>
