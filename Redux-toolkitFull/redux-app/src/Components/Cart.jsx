@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{useState,useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
+import {Toaster,toast} from 'react-hot-toast'
 import {
   remove,
   incrementQuantity,
@@ -10,9 +11,16 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart);
+
+  const [totalAmount ,setTotal] = useState(0);
+  useEffect(()=>{
+setTotal(products.reduce((acc,curr)=> acc+ curr.price,0));
+  },[products])
   const handleRemove = (product) => {
     console.log(product);
+    toast.error('Product Removed from cart');
     dispatch(remove(product));
+    
   };
   const handleIncrement = (product) => {
     dispatch(incrementQuantity(product));
@@ -36,9 +44,12 @@ const Cart = () => {
               <button onClick={() => handleDecrement(item.id)}>
                 Decrement
               </button>
+              <Toaster/>
             </>
           );
         })}
+
+        <h2> TotalAmount :{totalAmount}</h2>
       </div>
     );
   }
