@@ -10,12 +10,7 @@ const App = () => {
   return (
     <>
     <DropdownFilter/>
-    <Checkbox/>
-    <PriceSlider/>
-    <PriceSorting/>
-    <Button/>
-
-    <Search/>
+    
     
     
     </>
