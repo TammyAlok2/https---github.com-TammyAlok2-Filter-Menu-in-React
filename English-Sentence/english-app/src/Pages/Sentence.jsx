@@ -1,20 +1,23 @@
 import React, { useState } from 'react'
 import Data from '../Data/Wakya.js'
+import './Sentence.css'
 import { Link } from 'react-router-dom';
 const Sentence = () => {
     const [Sent,setSent]= useState(Data);
     const [page,setPage] = useState(1);
-  
-    const handleClick =()=>{
-setPage(20);
-    }
+    let size = Sent.length;
+    const selectPageHandler = (selectedPage) => {
+        if (selectedPage >= 1 && selectedPage <= Sent.length / 10 && selectedPage !== page) {
+          setPage(selectedPage)
+        }
+      }
   return (
     <>
     <div className="container">
     <h2>Sentence</h2>
     <div className="answer">
         {
-            Sent.slice(page*1,page*10).map((item)=>{
+            Sent.slice(page * 10 - 10, page * 10).map((item)=>{
                 return(
                     <>
                     <div className="date">{item.Date}</div>
@@ -28,7 +31,19 @@ setPage(20);
                     </>
                 )
             })
+
+        
         }
+              {Sent.length > 0 && <div className="pagination">
+        <span onClick={() => selectPageHandler(page - 1)} className={page > 1 ? "" : "pagination__disable"}>◀</span>
+
+        {[...Array(Sent.length / 10)].map((_, i) => {
+          return <span key={i} className={page === i + 1 ? "pagination__selected" : ""} onClick={() => selectPageHandler(i + 1)}>{i + 1}</span>
+        })}
+
+        <span onClick={() => selectPageHandler(page + 1)} className={page < Sent.length / 10 ? "" : "pagination__disable"}>▶</span>
+      </div>}
+
  
     </div>
   
