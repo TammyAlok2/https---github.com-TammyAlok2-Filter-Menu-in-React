@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Navbar.css'
+import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Sentence from "./DailySentence";
 const Navbar = () => {
@@ -12,35 +12,44 @@ const Navbar = () => {
   return (
     <nav>
       <div className="contain">
-      <ul className="navbar">
-        <li><a href="/">Home</a></li>
-        <li className="dropdown" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
-          <a href="#">Courses</a>
-          {showDropdown && (
-            <div className="dropdown-content">
-             <Link to ={'sentence'}>15 Days Course</Link>
-             <Link to ={'sentence'}>30 Days Course</Link>
-             <Link to ={'sentence'}>30 Days Course</Link>
-            </div>
-          )}
-        </li>
-        
-        <li className="dropdown" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
-          <li><a href="#">Daily Practise</a>
-        {showDropdown && (
-            <div className="dropdown-content">
-             <Link to ={'sentences'}>Daily Vocabs</Link>
-             <Link to ={'sentence'}>Daily Sentence</Link>
-              <Link to ={'sentence'}>Daily Idioms</Link>
-            </div>
-          )}
+        <ul className="navbar">
+          <li>
+            <a href="/">Home</a>
           </li>
-        
-        </li>
-      </ul>
+          <li
+            className="dropdown"
+            onMouseEnter={handleDropdownToggle}
+            onMouseLeave={handleDropdownToggle}
+          >
+            <a href="#">Courses</a>
+            {showDropdown && (
+              <div className="dropdown-content">
+                <Link to={"sentence"}>15 Days Course</Link>
+                <Link to={"sentence"}>30 Days Course</Link>
+                <Link to={"sentence"}>30 Days Course</Link>
+              </div>
+            )}
+          </li>
+
+          <li
+            className="dropdown"
+            onMouseEnter={handleDropdownToggle}
+            onMouseLeave={handleDropdownToggle}
+          >
+            <li>
+              <a href="#">Daily Practise</a>
+              {showDropdown && (
+                <div className="dropdown-content">
+                  <Link to={"vocab"}>Daily Vocabs</Link>
+                  <Link to={"sentence"}>Daily Sentence</Link>
+                  <Link to={"sentence"}>Daily Idioms</Link>
+                </div>
+              )}
+            </li>
+          </li>
+        </ul>
       </div>
     </nav>
-   
   );
 };
 
