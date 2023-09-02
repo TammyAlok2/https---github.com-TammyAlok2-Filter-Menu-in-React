@@ -1,0 +1,9 @@
+.myDiv{
+    height: 20px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.name{
+    top: 200px;
+}
