@@ -15,10 +15,12 @@ const App = () => {
   };
 
   const filteredItems = items.filter((item) => {
-
     return selectedCheckboxes.includes(item.category);
   });
 
+
+
+  
   console.log(filteredItems);
   return (
     <div>

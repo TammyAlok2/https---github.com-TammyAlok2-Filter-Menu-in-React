@@ -19,6 +19,7 @@ console.log(filterProduct);
         onChange={handleChangeFilter}
       >
         <option value="">-- Please Select --</option>
+      
         <option value="Breakfast">Breakfast</option>
         <option value="Lunch">Lunch</option>
         <option value="Dinner">Dinner</option>

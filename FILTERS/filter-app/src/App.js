@@ -5,17 +5,13 @@ import PriceSorting from './Components/PriceSorting'
 import Button from './Components/Button'
 import PriceSlider from './Components/PriceSlider'
 import Search from './Components/Search'
+import Two from './Components/Two'
 
 const App = () => {
   return (
     <>
-    <DropdownFilter/>
-    <Checkbox/>
-    <PriceSlider/>
-    <PriceSorting/>
-    <Button/>
-
-    <Search/>
+    <Two/>
+    
     
     
     </>
