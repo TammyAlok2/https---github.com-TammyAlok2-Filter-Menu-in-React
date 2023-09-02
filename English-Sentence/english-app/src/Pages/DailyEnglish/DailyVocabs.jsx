@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Vocabs from "../Data/Vocabs";
+import Vocabs from "../../Data/Vocabs";
 import { Link } from "react-router-dom";
-import Pagination from "./Pagination.js";
+import Pagination from "../../Components/Pagination.js";
 const DailyVocabs = () => {
   const [Vocab, setVocab] = useState(Vocabs);
   const [currentPage, setCurrentPage] = useState(1);

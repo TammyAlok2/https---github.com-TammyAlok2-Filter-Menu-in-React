@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Vocabs from "../Data/Vocabs";
+import Vocabs from "../../Data/Vocabs";
 const VocabSingle = () => {
   const Vocabulary = Vocabs;
   const { vocabId } = useParams();

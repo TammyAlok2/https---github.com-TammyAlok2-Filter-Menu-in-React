@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Data from "../Data/Wakya.js";
+import Data from "../../Data/Wakya.js";
 import "./Sentence.css";
 import { Link } from "react-router-dom";
-import Pagination from "./Pagination.js";
+import Pagination from "../../Components/Pagination.js";
 import "./DailySentence.css";
 
 const Sentence = () => {
@@ -26,7 +26,7 @@ const Sentence = () => {
                   <div className="date">{item.Date}</div>
                   <span className="month">{item.Month}</span>
                   <div className="main">
-                    <Link to={`/category/${item.id}`} className="title">
+                    <Link to={`/sentence/${item.id}`} className="title">
                       <div className="title">
                         Sentence of the Day | {item.id}
                       </div>
@@ -34,12 +34,12 @@ const Sentence = () => {
                     <div className="hindi">
                       Sentence of the Data |{item.Hindi}
                     </div>
-                    <Link to={`/category/${item.id}`}>
+                    <Link to={`/sentence/${item.id}`}>
                       {" "}
                       <img src={item.Image} alt="alok" height={100} />
                     </Link>
 
-                    <Link to={`/category/${item.id}`}>Read more</Link>
+                    <Link to={`/sentence/${item.id}`}>Read more</Link>
                   </div>
                 </div>
               </>

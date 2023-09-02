@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Wakya from "../Data/Wakya.js";
+import Wakya from "../../Data/Wakya.js";
 
 const SentenceSingle = () => {
   const { productId } = useParams();

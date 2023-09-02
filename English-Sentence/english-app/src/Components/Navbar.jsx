@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Sentence from "./DailySentence";
+import Sentence from "../Pages/DailyEnglish/DailySentence";
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className="dropdown-content">
                   <Link to={"vocab"}>Daily Vocabs</Link>
                   <Link to={"sentence"}>Daily Sentence</Link>
-                  <Link to={"sentence"}>Daily Idioms</Link>
+                  <Link to={"idiom"}>Daily Idioms</Link>
                 </div>
               )}
             </li>
