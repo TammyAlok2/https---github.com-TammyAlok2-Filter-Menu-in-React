@@ -24,9 +24,9 @@ const Navbar = () => {
             <a href="#">Courses</a>
             {showDropdown && (
               <div className="dropdown-content">
-                <Link to={"sentence"}>15 Days Course</Link>
-                <Link to={"sentence"}>30 Days Course</Link>
-                <Link to={"sentence"}>30 Days Course</Link>
+                <Link to={'/course/15DaysCourse'}>15 Days Course</Link>
+                <Link to={'/course/30DaysCourse'}>30 Days Course</Link>
+                <Link to={'/course/90DaysCourse'}>90 Days Course</Link>
               </div>
             )}
           </li>
@@ -43,6 +43,7 @@ const Navbar = () => {
                   <Link to={"vocab"}>Daily Vocabs</Link>
                   <Link to={"sentence"}>Daily Sentence</Link>
                   <Link to={"idiom"}>Daily Idioms</Link>
+                  <Link to ={'CourseCart'}> CourseCart </Link>
                 </div>
               )}
             </li>
